@@ -58,7 +58,7 @@ class _AiBotScreenState extends State<AiBotScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(title: Text("Ai Bot"),
+      appBar: AppBar(title: const Text("Ai Bot"),
        backgroundColor: Colors.black,
        centerTitle: true,
        foregroundColor: Colors.white,

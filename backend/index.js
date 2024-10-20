@@ -1,12 +1,12 @@
-const app=require('./app');
+const express=require('express');
+const routes=require('./routes');
+const app=express();
+require('dotenv').config(); 
+require('./config/db');
+const PORT=process.env.PORT || 3000;
 
-const port=3000;
-
-
-app.get('/',(req,res)=>{
-    res.send('Hello World');
-})
+app.use('/Authentication',routes);
 
 app.listen(port,()=>{
-    console.log(`Server listening on port ${port}`);
+    console.log(`Server listening on port ${ PORT }`);
 });

@@ -58,7 +58,7 @@ class _TextDetectionState extends State<TextDetection> {
   Future<void> _copyToClipboard() async {
     await Clipboard.setData(ClipboardData(text: recognizedText));
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Text copied to clipboard')),
+      const SnackBar(content: Text('Text copied to clipboard')),
     );
   }
 
